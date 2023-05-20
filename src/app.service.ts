@@ -5,8 +5,4 @@ export class AppService {
   getWelcome(): string {
     return 'Welcome to the Boilerplate API!';
   }
-
-  getStatus(): { status: string } {
-    return { status: 'OK' };
-  }
 }

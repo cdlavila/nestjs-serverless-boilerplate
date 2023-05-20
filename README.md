@@ -2,6 +2,18 @@
 
 NestJS Boilerplate for Serverless applications
 
+We have the following endpoints (Lambda functions):
+- `GET /api`
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `GET /api/auth/refresh`
+- `POST /api/users`
+- `GET /api/users`
+- `GET /api/users/myself`
+- `GET /api/users/:id`
+- `PUT /api/users/:id`
+- `DELETE /api/users/:id`
+
 ## Installation
 
 To install the project, we need to have installed the following tools:

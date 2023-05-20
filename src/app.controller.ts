@@ -16,11 +16,4 @@ export class AppController {
   sayWelcome(): string {
     return this.appService.getWelcome();
   }
-
-  @ApiOperation({ summary: 'Returns the status of the API' })
-  @ApiResponse({ status: 200, schema: { example: { status: 'OK' } } })
-  @Get('status')
-  getStatus(): { status: string } {
-    return this.appService.getStatus();
-  }
 }
