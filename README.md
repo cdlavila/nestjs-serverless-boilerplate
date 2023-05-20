@@ -80,7 +80,7 @@ serverless offline start
 ```
 
 #### Step 7
-Test the lambda functions by calling the endpoints using [Swagger](http://localhost:3000/dev/docs)
+Test the lambda functions by calling the endpoints using [Swagger](http://localhost:3000/dev/docs) or [Postman](https://www.postman.com/).
 
 #### Deployment to AWS (Optional)
 
