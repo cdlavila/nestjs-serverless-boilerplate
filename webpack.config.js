@@ -4,6 +4,7 @@ module.exports = (options, webpack) => {
     '@nestjs/websockets/socket-module',
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const TerserPlugin = require('terser-webpack-plugin');
 
   return {
