@@ -1,0 +1,24 @@
+service: nestjs-serverless-boilerplate
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-optimize
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+custom:
+  optimize:
+    external: ['swagger-ui-dist']
+
+functions:
+  main:
+    handler: dist/src/main.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}'

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    env_file: .env
+    environment:
+      POSTGRES_USER: ${DATABASE_USER_DEV}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD_DEV}
+      POSTGRES_DB: ${DATABASE_NAME_DEV}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    networks:
+      - nestjs-serverless-boilerplate
+networks:
+  nestjs-serverless-boilerplate:
+    driver: bridge
+
+# COMMANDS: docker-compose up -d, docker-compose down
