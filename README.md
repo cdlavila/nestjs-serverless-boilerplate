@@ -68,7 +68,7 @@ serverless offline start
 ```
 
 #### Step 7
-Test the lambda functions by calling the endpoints using [Postman](https://www.getpostman.com/) or similar software.
+Test the lambda functions by calling the endpoints using [Swagger](http://localhost:3000/dev/docs)
 
 #### Deployment to AWS (Optional)
 
@@ -76,12 +76,15 @@ Test the lambda functions by calling the endpoints using [Postman](https://www.g
 ```bash
 serverless config credentials --provider aws --key YOUR_ACCESS_KEY --secret YOUR_SECRET_KEY
 ```
-<b>2.</b> Deploy the project
+
+<b>2.</b> Configure environment variables by using for example, AWS Secrets Manager, looking the documentation [here](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
+
+<b>3.</b> Deploy the project
 ```bash
 serverless deploy
 ```
 
-<b>3.</b> Additionally, to remove the project from AWS
+<b>4.</b> Additionally, to remove the project from AWS
 ```bash
 serverless remove
 ```
